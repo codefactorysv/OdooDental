@@ -1190,147 +1190,86 @@ h2.section-title {
 }
 
 /* ===== SECTION 11 · REPORTES ===== */
-#reportes {
-  background: white;
-}
-.dashboard-mockup {
-  background: var(--slate-800);
+.dashboard-preview {
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  gap: 28px;
+  align-items: center;
+
+  margin-top: 100px;
+  background: linear-gradient(135deg, #0f2742, #081c32);
   border-radius: var(--radius-xl);
-  padding: 28px;
+  padding: 34px;
   box-shadow: var(--shadow-lg);
   overflow: hidden;
 }
-.dashboard-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 24px;
-}
-.dashboard-header h3 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: white;
-}
-.dashboard-header span {
+
+.preview-badge {
+  display: inline-block;
+  background: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+  padding: 6px 12px;
+  border-radius: 999px;
   font-size: 0.75rem;
-  color: var(--slate-400);
-  background: rgba(255, 255, 255, 0.06);
-  padding: 4px 12px;
-  border-radius: 20px;
-}
-.kpi-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin-bottom: 20px;
-}
-.kpi-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-md);
-  padding: 18px 16px;
-  transition: background 0.2s;
-}
-.kpi-card:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-.kpi-label {
-  font-size: 0.7rem;
-  color: var(--slate-400);
-  font-weight: 600;
-  margin-bottom: 8px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.kpi-value {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: white;
-  margin-bottom: 4px;
-}
-.kpi-change {
-  font-size: 0.72rem;
-  font-weight: 600;
-}
-.kpi-change.up {
-  color: var(--mint);
-}
-.kpi-change.down {
-  color: #f87171;
-}
-.chart-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 14px;
+  font-weight: 700;
   margin-bottom: 14px;
-}
-.chart-block {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: var(--radius-md);
-  padding: 18px;
-}
-.chart-title {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--slate-400);
-  text-transform: uppercase;
-  margin-bottom: 14px;
-}
-.bar-chart {
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
-  height: 80px;
-}
-.bar-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  flex: 1;
-}
-.bar-fill {
-  width: 100%;
-  border-radius: 4px 4px 0 0;
-  transition: height 0.5s;
-  min-height: 6px;
-}
-.bar-label {
-  font-size: 0.6rem;
-  color: var(--slate-500);
-}
-.pie-chart-sim {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.pie-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.pie-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.pie-label {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.7);
-  flex: 1;
-}
-.pie-val {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: white;
-}
-.kpi-row-2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
 }
 
+.preview-text h3 {
+  color: white;
+  font-size: 1.7rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.preview-text p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.preview-screen {
+  background: #f8fafc;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  transform: perspective(1000px) rotateY(-5deg);
+}
+
+.screen-top {
+  height: 34px;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 14px;
+}
+
+.screen-top span {
+  width: 10px;
+  height: 10px;
+  background: #94a3b8;
+  border-radius: 50%;
+}
+
+.preview-screen img {
+  width: 100%;
+  display: block;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media (max-width: 900px) {
+  .dashboard-preview {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .preview-screen {
+    transform: none;
+  }
+}
 /* ===== SECTION 12 · BENEFICIOS ===== */
 #beneficios {
   background: var(--slate-100);
